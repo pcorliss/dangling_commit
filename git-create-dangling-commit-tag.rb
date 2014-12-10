@@ -15,6 +15,4 @@ cmd = "ssh -x #{hostname} \"git-receive-pack '#{repo}'\""
 
 Open3.popen3(cmd) do |stdin, stdout, stderr, wait_thr|
   stdin.write constructed_cmd
-  $stdout.print stdout.read
-  $stderr.print stderr.read
 end
